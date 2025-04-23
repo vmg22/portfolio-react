@@ -1,41 +1,32 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import "../styles/Main.css";
+import React from 'react'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import '../styles/Main.css'
 
 const Main = (props) => {
-    return (
-        <div className="main-container">
-            <Card className="card">
-                <Card.Img variant="top" src={props.Alumno.imagen} />
-                <Card.Body>
-                    <Card.Title className="card-title">
-                        {props.Alumno.nombre} {props.Alumno.apellido}
-                    </Card.Title>
-                    <Card.Text className="card-text">
-                        Soy estudiante de la carrera de Programación Universitaria y hasta el momento vimos{" "}
-                        {props.Alumno.lenguajes.map((lenguaje, index) => (
-                            <span key={index}> {lenguaje}</span>
-                        ))}
-                        .
-                    </Card.Text>
-                    Mi Mascota se llama{" "}
-                    {props.Alumno.mascotas.map((mascota, index) => (
-                        <span key={index}> {mascota.nombre}</span>
-                    ))}{" "}
-                    y es un{" "}
-                    {props.Alumno.mascotas.map((mascota, index) => (
-                        <span key={index}> {mascota.tipo}</span>
-                    ))}{" "}
-                    de{" "}
-                    {props.Alumno.mascotas.map((mascota, index) => (
-                        <span key={index}> {mascota.edad}</span>
-                    ))}
-                    .
-                </Card.Body>
-            </Card>
-        </div>
-    );
-};
+  return (
+    <div className="main-container">
+      <main>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={props.Alumno.imagen} />
+      <Card.Body>
+        <Card.Title>{props.Alumno.nombre} {props.Alumno.apellido}</Card.Title>
+        <Card.Text>
+          Estudio en UTN-FRT la tecnicatura universitaria en programacion donde me enseñaron lenguajes como
+          {props.Alumno.Lenguajes.map(Lenguajes => <span> {Lenguajes } </span>)}
+          Tengo {props.Alumno.Edad} años y tengo una mascota que se llama {props.Alumno.mascota[0].nombre} y es un {props.Alumno.mascota[0].especie} de {props.Alumno.mascota[0].edad}.
+        </Card.Text>
+    
+      </Card.Body>
+    </Card>
+    <br />
+    <br />
+    <br />
+      </main>
+    
+    
+    </div>
+  )
+}
 
-export default Main;
+export default Main
