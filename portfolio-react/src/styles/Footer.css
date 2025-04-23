@@ -1,0 +1,27 @@
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e1e2f;
+  color: #ffffff;
+}
+
+.footer a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #00d8ff;
+  font-size: 1.2rem;
+}
+
+.footer a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer a svg {
+  transition: transform 0.3s ease;
+}
+
+.footer a:hover svg {
+  transform: scale(1.2);
+}
